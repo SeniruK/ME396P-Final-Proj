@@ -5,5 +5,5 @@ Alejandro Gleason I am committed to me and my team members learning Python
 
 Seniru Kottegoda {seniru.nk@gmail.com}
 Seniru Kottegoda {junior}
-Seniru Kottegoda My interests include {biomechanics, robotics, data science}
+Seniru Kottegoda My interests include {biomechanics, robotics, data_science}
 Seniru Kottegoda I am committed to me and my team members learning Python
