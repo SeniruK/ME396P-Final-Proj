@@ -7,3 +7,8 @@ Seniru Kottegoda {seniru.nk@gmail.com}
 Seniru Kottegoda {junior}
 Seniru Kottegoda My interests include {biomechanics, robotics, data_science}
 Seniru Kottegoda I am committed to me and my team members learning Python
+
+Ricardo Vazquez {r.antonio.vazquez@outlook.com}
+Ricardo Vazquez {senior}
+Ricardo Vazquez My interests include {cybersecurity, machine_learning, software_engineering}
+Ricardo Vazquez I am committed to me and my team members learning Python
