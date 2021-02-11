@@ -2,3 +2,8 @@ Alejandro Gleason {alejandrogleasonm@gmail.com}
 Alejandro Gleason {junior}
 Alejandro Gleason My interests include {iOS, cybersecurity, algorithms}
 Alejandro Gleason I am committed to me and my team members learning Python
+
+Seniru Kottegoda {seniru.nk@gmail.com}
+Seniru Kottegoda {junior}
+Seniru Kottegoda My interests include {biomechanics, robotics, data science}
+Seniru Kottegoda I am committed to me and my team members learning Python
