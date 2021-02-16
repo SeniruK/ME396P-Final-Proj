@@ -1,3 +1,7 @@
+Emily Crowell {emilycrowell@utexas.edu}
+Emily Crowell {master's}
+Emily Crowell My interests include {data_analytics, applied_mathematics, automation}
+Emily Crowell I am committed to me and my team members learning Python
 Alejandro Gleason {alejandrogleasonm@gmail.com}
 Alejandro Gleason {junior}
 Alejandro Gleason My interests include {iOS, cybersecurity, algorithms}
