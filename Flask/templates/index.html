@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<title> Movie Finder </title>
+{% endblock %}
+
+{% block body %}
+
+
+<br>
+<br>
+
+
+
+<div class = "container">
+
+	<h3> Recommend movies by title </h3>
+
+	<form action = '/' method = 'POST'>
+		<div class="form-group">
+			<label for="movieNameInput">Movie name</label>
+			<input type = 'text' class="form-control" placeholder="Enter movie name" name = 'movie' id = 'movieNameInput'>
+		</div>
+
+		<br>
+
+		<button type = 'submit' value = 'Recommend movies' class="btn btn-outline-primary"> 
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+		  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+		</svg>
+		Find similar movies </button>
+	</form>
+
+</div>
+
+<br>
+<br>
+
+<div class = "container">
+	<!-- If there is an error to show, show it -->
+	{% if MovienotFoundError %}
+	<div class="alert alert-warning" role="alert">
+		<h3> The movie {{ inputMovie }} wasn't found </h3>
+	</div>
+	{% endif %}
+
+	<!-- If there is content to show, show table -->
+	{% if (showFirstTable) and (numberOfMovies > 0) %}
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th scope = 'col'> # </th>
+				<th scope = 'col'> Title </th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Load and list movies by name -->
+			{% for index, movie in recommendedMovies %}
+			<tr>
+				<td> {{ index + 1 }} </td>
+				<td> {{ movie }} </td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	{% endif %}
+
+</div>
+
+<br>
+
+<div class = "container">
+
+	<h3> Recommend movies by my ranking history </h3>
+
+	<form action = '/moviesILike' method = 'POST'>
+
+		<br>
+
+		<div class="form-group">
+			<input type = 'hidden' class="form-control" name = 'userIDCollaborativeFiltering' id = 'userIDCollaborativeFiltering' value = "{{ session['userID'] }}">
+		</div>
+
+		<button type = 'submit' value = 'Find movies I like' class="btn btn-outline-primary"> 
+
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+		  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+		</svg>
+
+		Find movies I like </button>
+	</form>
+
+</div>
+
+<div class = "container">
+
+	<!-- If there is content to show, show table -->
+	{% if (showSecondTable) and (numberOfMovies > 0) %}
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th scope = 'col'> # </th>
+				<th scope = 'col'> Title </th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Load and list movies by name -->
+			{% for index, movie in recommendedMovies %}
+			<tr>
+				<td> {{ index + 1}} </td>
+				<td> {{ movie }} </td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	{% endif %}
+
+</div>
+
+
+{% endblock %}

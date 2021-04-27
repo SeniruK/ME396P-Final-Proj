@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<title> Movie Finder </title>
+{% endblock %}
+
+{% block body %}
+
+<br>
+<br>
+
+<div class = "container">
+
+	<h3> Login </h3>
+
+	<form action = '/login' method = 'POST'>
+		<div class="form-group">
+			<label for="userID">User ID</label>
+			<input type = 'text' class="form-control" placeholder="Enter user ID" name = 'userID' id = 'userID'>
+		</div>
+
+		<br>
+
+		<button type = 'submit' value = 'Login' class="btn btn-outline-primary"> 
+		Login </button>
+	</form>
+</div>
+
+<br>
+<br>
+
+<!-- Show error , if any -->
+{% if loginError %}
+	<div class = "container">
+		<div class="alert alert-warning" role="alert">
+			<p> {{ errorMessage }} </p>
+		</div>
+	</div>
+{% endif %}
+
+<!-- Show confirmation message, if succesful -->
+{% if loginSuccesful %}
+	<div class = "container">
+		<div class="alert alert-success" role="alert">
+			<p> Welcome back! </p>
+		</div>
+	</div>
+{% endif %}
+
+<br>
+<br>
+
+
+
+{% endblock %}

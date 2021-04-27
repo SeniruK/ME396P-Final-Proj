@@ -1,0 +1,17 @@
+.customTitle {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.userInfo{
+	color: white;
+}
+
+body {
+	background-color: #adb5bd !important;
+}
+
+input[ type = text] {
+	background-color: #3c52bc00;
+	color: white;
+}
