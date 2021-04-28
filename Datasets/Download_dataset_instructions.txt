@@ -1,0 +1,5 @@
+1. Go to the link below to download the Movies Dataset:
+
+https://www.kaggle.com/rounakbanik/the-movies-dataset/download
+
+2. Insert all the .csv files on this folder
