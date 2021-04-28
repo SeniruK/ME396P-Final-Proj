@@ -9,13 +9,14 @@
 <br>
 <br>
 
+<!-- Login form, that has a text label and a button for submitting it, sends a POST request to /login route -->
 <div class = "container">
 
 	<h3> Login </h3>
 
 	<form action = '/login' method = 'POST'>
 		<div class="form-group">
-			<label for="userID">User ID</label>
+			<label for="userID"> User ID </label>
 			<input type = 'text' class="form-control" placeholder="Enter user ID" name = 'userID' id = 'userID'>
 		</div>
 
@@ -29,7 +30,7 @@
 <br>
 <br>
 
-<!-- Show error , if any -->
+<!-- Show error, if any, after receing a result -->
 {% if loginError %}
 	<div class = "container">
 		<div class="alert alert-warning" role="alert">
@@ -49,7 +50,6 @@
 
 <br>
 <br>
-
 
 
 {% endblock %}

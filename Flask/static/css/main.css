@@ -6,12 +6,3 @@
 .userInfo{
 	color: white;
 }
-
-body {
-	background-color: #adb5bd !important;
-}
-
-input[ type = text] {
-	background-color: #3c52bc00;
-	color: white;
-}
