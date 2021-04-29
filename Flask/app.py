@@ -244,10 +244,17 @@ def recommend_api():
 
 	parameters = request.get_json() # Fetch the received results
 
-	movieName = parameters['movie'] # Just get the movie title value
+	try:
+		movieName = parameters['movie'] # Just get the movie title value
+	except: # the JSON format is incorrect
+		return jsonify({'result' : 'Error!', 'Description': 'The JSON format is incorrect'}) # return JSON response
 
-	recommendedResults = prediction.get_recommendations_description(movieName).to_list() # get the results from the model
-	
+	try:
+		recommendedResults = prediction.get_recommendations_description(movieName).to_list() # get the results from the model
+	except: # the movie wasn't found
+		return jsonify({'result' : 'Error!', 'Description': 'The movie does not exist'}) # return JSON response
+
+	# Success!
 	return jsonify({'result' : 'Success!', 'movie received' : movieName, 'results': recommendedResults}) # return JSON response
 
 
