@@ -1,5 +1,8 @@
 # Final project
-Application Programming for Engineers Team Repository
+Application Programming for Engineers 
+Team Repository
+
+# Optimize Prime G07
 
 Team Members:
 
@@ -16,6 +19,7 @@ However, as there is a great catalog to browse through, some people take a great
 
 # Presentation: 
 https://drive.google.com/file/d/1CDpe_ZcExkyv7BjFzCNTFhsWfebe2UYi/view?usp=sharing
+
 # Documentation: 
 https://docs.google.com/document/d/1BVOnOAMgsReBJ_D-x-INv5FV7uYFPyeI5qJbYvlor_8/edit?usp=sharing
 
