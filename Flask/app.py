@@ -5,7 +5,6 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 
 # Import backend files that contain the logic for recommending movies to the user
 import prediction
-import collaborativeFiltering
 
 app = Flask(__name__) # Set up app
 
@@ -38,7 +37,7 @@ def validateUserID(userID):
 	'''
 
 	# Retrieve list of valid IDs
-	listUserIDs = collaborativeFiltering.get_user_IDs()
+	listUserIDs = prediction.get_user_IDs()
 
 	if userID in listUserIDs:
 		return True
@@ -88,7 +87,7 @@ def indexPOST():
 
 	# Obtain recommended movies
 	try:
-		results = collaborativeFiltering.get_recommendations_per_user(userIDInput)
+		results = prediction.get_recommendations_per_user(userIDInput)
 
 		# Success! Show list with results (enumerate to show index on the table)
 		return render_template('index.html', 
@@ -130,7 +129,7 @@ def byOverviewPOST():
 
 	# Obtain results from the model
 	try:
-		results = prediction.get_recommendations(movie_name).to_list()
+		results = prediction.get_recommendations_description(movie_name).to_list()
 
 		# Movie title was found! show the table results!
 		return render_template('byOverview.html', 
@@ -173,7 +172,7 @@ def byGenreAndCastPOST():
 
 	# Obtain results from the model
 	try:
-		results = prediction.get_recommendations(movie_name).to_list()
+		results = prediction.get_recommendations_plot_cast(movie_name).to_list()
 
 		# Movie title was found! show the table results!
 		return render_template('byGenreAndCast.html', 
@@ -247,7 +246,7 @@ def recommend_api():
 
 	movieName = parameters['movie'] # Just get the movie title value
 
-	recommendedResults = prediction.get_recommendations(movieName).to_list() # get the results from the model
+	recommendedResults = prediction.get_recommendations_description(movieName).to_list() # get the results from the model
 	
 	return jsonify({'result' : 'Success!', 'movie received' : movieName, 'results': recommendedResults}) # return JSON response
 
