@@ -50,8 +50,11 @@ Previous requirements: 26 GB of free space available in order to save the models
 Continue running all the cells of the Jupyter Notebook file.
 This should take some minutes to finish running (about 15-20 minutes, since each model is being created).
 Once it finishes running, you should move the generated csv files (dfMovies.csv, dfMoviesGenre.csv, dfRatUnique.csv) to the Datasets folder, and the Pickle files (cosine_sim.sav, svd_model.sav, cosine_simOT.sav) to the folder Serialized_objects from the cloned repository. In case you don’t want to run the .csv generation cells, you can find them here.
+
 [dfRatings](https://drive.google.com/file/d/1p8QiT9Uc9KMZJQWrjgXx0wcYuwoSkVP-/view?usp=sharing): https://drive.google.com/file/d/1p8QiT9Uc9KMZJQWrjgXx0wcYuwoSkVP-/view?usp=sharing
+
 [dfMovieGenre](https://drive.google.com/file/d/1KU-fk-qeRvf4AD9NnEeux64taHh9yvSw/view?usp=sharing): https://drive.google.com/file/d/1KU-fk-qeRvf4AD9NnEeux64taHh9yvSw/view?usp=sharing
+
 [dfMovies](https://drive.google.com/file/d/1fzK9ZzlrN3AAywh1urPwEgGmydS4rJat/view?usp=sharing): https://drive.google.com/file/d/1fzK9ZzlrN3AAywh1urPwEgGmydS4rJat/view?usp=sharing
 
 5. Run the application
