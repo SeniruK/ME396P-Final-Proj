@@ -6,6 +6,7 @@
 
 import pickle
 import pandas as pd
+pd.options.mode.chained_assignment = None #added line (5/16/21)
 from surprise import SVD
 
 
